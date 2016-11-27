@@ -12,7 +12,7 @@ TEST_FILES = rmsgpack.o \
 
 .PHONY: all clean
 
-all: rmsgpack_test librmsgpack.so
+all: librmsgpack.so
 
 %.o: %.c
 	${CC} $(INCFLAGS) $< -c ${CFLAGS} -o $@
@@ -27,4 +27,4 @@ check: test
 	./test
 
 clean:
-	rm -rf *.o rmsgpack_test librmsgpack.so test
+	rm -rf *.o librmsgpack.so test

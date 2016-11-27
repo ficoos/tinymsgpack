@@ -160,11 +160,11 @@ static struct rmsgpack_read_callbacks stub_callbacks = {
 	stub_read_array_start
 };
 
-static int fd_read(void * user_data, void * buffer, uint32_t len) {
+static int fd_read(void * user_data, void * buffer,  size_t len) {
 	return read(*(int *)user_data, buffer, len);
 }
 
-static int fd_write(void * user_data, const void * buffer, uint32_t len) {
+static int fd_write(void * user_data, const void * buffer, size_t len) {
 	return write(*(int *)user_data, buffer, len);
 }
 

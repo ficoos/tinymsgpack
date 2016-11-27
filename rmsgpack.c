@@ -478,7 +478,9 @@ static int read_array(
    return 0;
 }
 
-int rmsgpack_read(struct rmsgpack_file * file, struct rmsgpack_read_callbacks * callbacks,
+int rmsgpack_read(
+		struct rmsgpack_file * file,
+		struct rmsgpack_read_callbacks * callbacks,
       void * data)
 {
    int rv;
